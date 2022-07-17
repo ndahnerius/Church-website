@@ -1,0 +1,653 @@
+@import './resets';
+@import './variables';
+
+
+
+// function for weights
+@function weight($weight_name) {
+    @return map-get($font-weights, $weight_name )
+}
+
+;
+
+
+
+// function for the fontsize
+@function fontsize($fontsize_name) {
+    @return map-get($font-size, $fontsize_name)
+}
+
+;
+
+@mixin Mobile {
+    @media(max-width: $mobile) {
+        @content;
+    }
+}
+
+
+
+
+
+// Main Sass styling
+// header styling
+header {
+    width: 100%;
+    height: 100px;
+    background: $primary-color;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    & .logo {
+        font-size: fontsize(normal);
+        margin: 0 80px;
+        background: white;
+        padding: 2em;
+        text-align: center;
+        border-radius: 50%;
+
+        @include Mobile {
+            margin: 0 30px;
+        }
+    }
+
+    & .navigation {
+        width: 100%;
+
+
+    }
+
+    & .navbar ul {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+
+        
+        // Mobile menu styling 
+        @include Mobile {
+            flex-direction: column;
+            display: none;
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 100%;
+            min-height: 128vh;
+            background: rgb(16, 30, 36);
+
+
+        }
+
+        & .fa-close {
+            position: absolute;
+            top: 0;
+            left: 0;
+            margin: 1rem;
+            color: #fff;
+        }
+        // End of mobile menu styling 
+        
+
+        & li {
+
+            list-style: none;
+            transition: 0.2s ease;
+
+            @include Mobile {
+                &:hover {
+                    transform: scale(1.2);
+
+                }
+            }
+
+        }
+ 
+        & li a {
+            color: $text-color-light;
+            font-weight: weight(bold);
+            font-size: fontsize(regular);
+            transition: 0.5s;
+
+            &::after {
+                content: "";
+                width: 0;
+                height: 2px;
+                display: block;
+                margin: auto;
+                background: $accent-color;
+                transition: 0.5s;
+            }
+
+            &:hover::after {
+                width: 100%;
+            }
+
+            &:hover {
+                color: $accent-color;
+            }
+        }
+
+       
+    }
+
+    & .fas {
+
+        display: none;
+
+        &:hover {
+            cursor: pointer;
+            color: $accent-color;
+        }
+
+        @include Mobile {
+            display: block;
+            float: right;
+            margin-right: 40px;
+            font-size: fontsize(medium);
+        }
+    }
+
+    
+        // Our church sub menu styling 
+    .Ourchurch-link .our-church-sub{
+        position: absolute;
+        display: block;
+        background: $primary-color;
+        width: 8rem;
+        text-align: center;
+        line-height: 40px;
+        opacity: 80%;
+        border: 1px solid $primary-color;
+        display: none;
+
+        
+
+        & li{
+           font-weight: normal;
+          &:hover{
+            color: $text-color-light
+          }   
+        }
+    }
+
+    .Ourchurch-link:hover .our-church-sub{
+        display: block;
+        
+    }
+
+}
+
+
+
+// top main section styling
+
+.top-section {
+    width: 100%;
+
+    & .top-section-text {
+        max-width: 100%;
+        text-align: center;
+        padding: 200px 0;
+        background-image: url(/dist/images/bg-image.jpg);
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+
+        & .first-text {
+            line-height: 2rem;
+            font-size: fontsize(medium);
+            font-weight: normal;
+            color: gray;
+        }
+
+        & .second-text {
+            text-transform: uppercase;
+            font-size: fontsize(large);
+            color: $text-color-light;
+            font-weight: normal;
+        }
+
+        & .third-text {
+            line-height: 2rem;
+            font-size: fontsize(medium);
+            color: $text-color-light;
+            padding-bottom: .5em;
+            font-weight: normal;
+
+
+        }
+    }
+
+
+
+    // Dots stylng 
+    & .dots {
+        font-size: 1rem;
+
+
+
+        & .dot {
+            width: 12px;
+            height: 12px;
+            background: $text-color-light;
+            display: inline-block;
+            border-radius: 50%;
+            margin-right: .5em;
+            transition: 0.2s ease;
+
+
+
+            &:hover {
+                cursor: default;
+                background: $accent-color;
+                transform: scale(1.8);
+            }
+
+        }
+    }
+
+
+
+    // hero-button
+    & .hero-btn {
+        text-align: center;
+        margin-top: 50px;
+
+
+
+        & a {
+            border: 1px solid $accent-color;
+            padding: .8em 2em;
+            background: transparent;
+            color: $accent-color;
+            border-radius: 10px;
+            transition: 0.5s ease;
+            font-size: 1rem;
+
+            //hero-button hover 
+            &:hover {
+                letter-spacing: 2px;
+                background: $accent-color;
+                color: $text-color-light;
+            }
+        }
+    }
+
+}
+
+// quote-slider styling
+.quote-slider {
+    width: 100%;
+    background: $primary-color;
+
+
+
+    & p {
+        text-align: center;
+        padding-top: 1.3rem;
+        font-size: fontsize(regular);
+        text-transform: capitalize;
+
+        @include Mobile {
+
+            font-size: 1rem;
+        }
+    }
+}
+
+
+// our church section styling 
+.our-church-row {
+    width: 100%;
+    margin: 20px 0;
+
+
+    & h2 {
+        text-align: center;
+        margin: 40px 0;
+
+
+        &::before {
+            content: '';
+            width: 20px;
+            height: 5px;
+            background: $accent-color;
+            display: inline-block;
+            margin-right: 10px;
+
+        }
+
+
+        &::after {
+            content: '';
+            width: 20px;
+            height: 5px;
+            background: $accent-color;
+            display: inline-block;
+            margin-left: 10px;
+        }
+
+    }
+
+
+    & .our-church-col {
+        width: 80%;
+        margin: 0 12%;
+        display: flex;
+        justify-content: space-evenly;
+
+        @include Mobile {
+            flex-direction: column;
+        }
+
+
+
+        & .xtics {
+            margin-right: 30px;
+            margin-bottom: 20px;
+            background-color: $primary-color;
+            border-radius: 5px;
+            text-align: center;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            transition: 0.3s ease;
+
+            &:hover {
+                transform: scale(1.1);
+                cursor: default;
+            }
+
+        }
+    }
+}
+
+
+// AboutUs styling
+.aboutus {
+    width: 80%;
+    min-height: 50%;
+    background-image: url(/dist/images/about-bg.jpg);
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    gap: 20px;
+    position: relative;
+    margin: auto;
+
+    @include Mobile {
+        flex-direction: column;
+    }
+
+    & .about-left .about-image {
+        max-width: 100%;
+        min-height: 100%;
+
+        @include Mobile {
+            display: none;
+        }
+
+    }
+
+    & .about-right {
+        margin: 4em 0;
+        position: relative;
+
+        @include Mobile {
+            text-align: center;
+        }
+
+        & h3 {
+            color: $accent-color;
+            text-decoration: underline;
+
+        }
+
+        & p {
+            margin-top: 10px;
+            margin-bottom: 20px;
+        }
+
+        & a {
+            background: $accent-color;
+            color: $text-color-light;
+            padding: 10px 20px;
+            transition: 0.2s ease;
+
+
+            &:hover {
+
+                box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            }
+        }
+    }
+}
+
+// Events Section
+.events {
+    max-width: 80%;
+    min-height: 100%;
+    background-color: $primary-color;
+    margin: auto;
+    padding-bottom: 3rem;
+
+    & .event-title {
+        text-align: center;
+        text-transform: capitalize;
+        color: $text-color-dark;
+
+        & h1 {
+            padding-top: 20px;
+            text-decoration: underline;
+        }
+    }
+
+    & .event-card {
+        padding-top: 2rem;
+        gap: 20px;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+
+
+        @include Mobile {
+            flex-direction: column;
+
+        }
+
+        & .event-card1 {
+            text-align: center;
+
+            & .fa-church {
+                font-size: fontsize(large);
+                color: $accent-color;
+                background: #fff;
+                padding: 20px 20px;
+                border-radius: 50%;
+                margin-top: 50px;
+                margin-bottom: 20px;
+                transition: 0.3s ease;
+                
+                &:hover{
+                    transform: translateY(-15px);
+                    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+                }
+            }
+
+            & .fa-bible {
+                @extend .fa-church
+            }
+        }
+    }
+}
+
+
+    //cummunuty styling 
+.community{
+    max-width: 100%;
+    margin-top: 20px;
+    position: relative;
+
+    & .community-image{
+       max-width: 80%;
+       min-height:100%;
+       margin: auto;
+       position: relative;
+
+       & img{
+        max-width: 100%;
+        filter: brightness(80%);
+        transition: 0.5s ease;
+        
+
+        &:hover{
+            filter: brightness(50%);
+        }
+
+        @include Mobile(){
+            filter: brightness(50%);
+        }
+       }
+    }
+
+    & .community-image .community-text{
+        text-align: center;
+        color: #fff;
+        position: absolute;
+        top: 0;
+
+        & h3{
+            text-decoration: underline;
+            font-weight: normal;
+            padding: 30px 0;
+
+            @include Mobile{
+                padding: 10px 0;
+            }
+        }
+        
+
+        & h1{
+            font-weight: normal;
+            font-size: 40px;
+            padding-top: 6px;
+            @include Mobile{
+                font-size: 21px;
+                padding-top: 0px;
+            }   
+        }
+
+
+        & p{
+            padding-top: 40px;
+            @include Mobile(){
+                padding-top: 6px;
+                font-size: 12px;
+            }
+
+        }
+
+        & .community-button{
+            background: $accent-color;
+            position: relative;
+            top: 20px;
+            padding:6px 20px;
+            color:#fff;
+            
+            @include Mobile(){
+                font-size: .5rem;
+                top: 19%;
+            }
+        }
+    
+    }
+
+}
+
+
+// Pioneer Styling 
+.pioneer{
+    width: 80%;
+    background: $primary-color;
+    margin: 5% auto;
+    display: flex;
+    
+    
+
+    @include Mobile(){
+        flex-direction: column-reverse;
+        align-items: center;
+        text-align: center;
+    }
+
+    & .pionners-left #pioneer-image{
+        width: 65%;
+        height: 100%;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        @include Mobile(){
+            margin-top: 30px;
+        }
+        
+
+        @include Mobile(){
+            width: 30ch;
+            margin-bottom: 20px;
+           
+            
+        }
+    }
+
+    & .pioneer-right{
+       width:80%;
+       position: relative;
+       
+       & h2{
+        max-width: 60%;
+        font-size: fontsize(medium);
+        background: $accent-color;
+        padding: 10px 4px;
+        text-align: center;
+        margin-top: 20px;
+        margin-bottom: 10px;
+        color: $text-color-light;
+        text-transform: capitalize;
+
+        @include Mobile(){
+            max-width: 100%
+        }
+       }
+
+       & p{
+        @extend .pioneer-right;
+        border-radius: 4px;
+        padding-bottom: 30px;
+        @include Mobile(){
+            margin: 0 auto;
+            padding-bottom: 30px;
+        }
+       }
+
+       & a{
+        background: $accent-color;
+        color: $text-color-light;
+        padding: 10px 15px;
+        border-radius: 4px;
+        text-transform: capitalize;
+        transition: 0.5s;
+
+        @include Mobile(){
+            background: transparent;
+            border: 1px solid $accent-color;
+            color: $accent-color;
+        }
+
+        &:hover{
+            background: transparent;
+            border: 1px solid $accent-color;
+            color: $accent-color;
+        }
+       }
+    }
+
+
+    
+
+}

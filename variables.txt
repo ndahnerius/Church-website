@@ -1,0 +1,6 @@
+--primary-color: #eec9a3;
+--accent-color: #ff5c1c;
+--padding-primary: 2rem;
+--padding-secondary: 2rem;
+--margin-primary: 5rem;
+--marging-secondary: 10rem;
