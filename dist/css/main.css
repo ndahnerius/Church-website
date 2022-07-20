@@ -155,6 +155,10 @@ header .fas:hover {
   }
 }
 
+header .Ourchurch-link {
+  cursor: default;
+}
+
 header .Ourchurch-link .our-church-sub {
   position: absolute;
   display: block;
@@ -666,5 +670,315 @@ header .Ourchurch-link:hover .our-church-sub {
   background: transparent;
   border: 1px solid #ff5c1c;
   color: #ff5c1c;
+}
+
+.contact-head {
+  width: 100%;
+  min-height: 100vh;
+  background: url(/dist/images/contact-bg.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: #fff;
+  text-align: center;
+  padding-top: 4rem;
+  padding-bottom: 3rem;
+}
+
+.contact-head .contact-title {
+  color: #ff5c1c;
+  text-decoration: underline;
+  letter-spacing: 3px;
+}
+
+.contact-head .contact-form {
+  margin: 4rem;
+}
+
+.contact-head .contact-form .contact-item {
+  margin: 1rem;
+  font-weight: 700;
+}
+
+.contact-head .contact-form .text-input {
+  width: 350px;
+  height: 27px;
+}
+
+.contact-head .contact-form input::-webkit-input-placeholder {
+  color: #ff5c1c;
+  opacity: 60%;
+  text-align: center;
+}
+
+.contact-head .contact-form input:-ms-input-placeholder {
+  color: #ff5c1c;
+  opacity: 60%;
+  text-align: center;
+}
+
+.contact-head .contact-form input::-ms-input-placeholder {
+  color: #ff5c1c;
+  opacity: 60%;
+  text-align: center;
+}
+
+.contact-head .contact-form input::placeholder {
+  color: #ff5c1c;
+  opacity: 60%;
+  text-align: center;
+}
+
+.contact-head .contact-form textarea {
+  width: 350px;
+  resize: none;
+}
+
+.contact-head .contact-form textarea::-webkit-input-placeholder {
+  color: #ff5c1c;
+  opacity: 60%;
+  text-align: center;
+  padding: 60px;
+}
+
+.contact-head .contact-form textarea:-ms-input-placeholder {
+  color: #ff5c1c;
+  opacity: 60%;
+  text-align: center;
+  padding: 60px;
+}
+
+.contact-head .contact-form textarea::-ms-input-placeholder {
+  color: #ff5c1c;
+  opacity: 60%;
+  text-align: center;
+  padding: 60px;
+}
+
+.contact-head .contact-form textarea::placeholder {
+  color: #ff5c1c;
+  opacity: 60%;
+  text-align: center;
+  padding: 60px;
+}
+
+.contact-head .contact-form .contact-btn {
+  width: 150px;
+  height: 40px;
+  background: #ff5c1c;
+  margin-top: 20px;
+  border-color: #ff5c1c;
+  color: #fff;
+}
+
+.discript-text {
+  text-align: center;
+  width: 80%;
+  margin: auto;
+  padding-top: 40px;
+  padding-bottom: 20px;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.contact-bottom {
+  max-width: 100%;
+  margin-top: 6rem;
+  margin-left: 5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.contact-bottom .contact-left {
+  width: 400px;
+  margin: 20px;
+}
+
+.contact-bottom .contact-left .info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 2rem;
+  margin-top: 2rem;
+  margin-bottom: 2.5rem;
+}
+
+.contact-bottom .contact-left .info .fa-house {
+  font-size: 2.4rem;
+  color: #ff5c1c;
+}
+
+.contact-bottom .contact-left .info .fa-phone {
+  font-size: 2.4rem;
+  color: #ff5c1c;
+}
+
+.contact-bottom .contact-left .info .fa-envelope {
+  font-size: 2.4rem;
+  color: #ff5c1c;
+}
+
+.contact-bottom .contact-right {
+  width: 50%;
+  background-color: gray;
+  margin-right: 15px;
+}
+
+footer {
+  width: 100%;
+  min-height: 40vh;
+  background: #2c052c;
+  margin-top: 10rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #fff;
+  position: relative;
+}
+
+footer .footer-left {
+  width: 16%;
+}
+
+@media (max-width: 900px) {
+  footer .footer-left {
+    width: 30%;
+    font-size: small;
+  }
+}
+
+footer .footer-left h3 {
+  margin-bottom: 2rem;
+  text-align: center;
+  text-decoration: underline;
+}
+
+footer .footer-left ul li {
+  margin-bottom: 10px;
+  padding: 4px 4px;
+  text-align: center;
+}
+
+footer .footer-left ul li:hover {
+  background: #ff5c1c;
+  font-weight: 500;
+}
+
+footer .footer-left ul li a {
+  color: #fff;
+}
+
+footer .footer-middle {
+  width: 16%;
+}
+
+@media (max-width: 900px) {
+  footer .footer-middle {
+    width: 30%;
+    font-size: small;
+  }
+}
+
+footer .footer-middle h3 {
+  margin-bottom: 2rem;
+  text-align: center;
+  text-decoration: underline;
+}
+
+footer .footer-middle ul li {
+  margin-bottom: 10px;
+  padding: 4px 4px;
+  text-align: center;
+}
+
+footer .footer-middle ul li:hover {
+  background: #ff5c1c;
+  font-weight: 500;
+}
+
+footer .footer-middle ul li a {
+  color: #fff;
+}
+
+footer .footer-right {
+  margin-top: -100px;
+  width: 16%;
+  min-height: 100%;
+  text-align: center;
+}
+
+@media (max-width: 900px) {
+  footer .footer-right {
+    width: 30%;
+    font-size: small;
+  }
+}
+
+footer .footer-right h3 {
+  margin-top: 3.5rem;
+  margin-bottom: 2rem;
+  text-align: center;
+  text-decoration: underline;
+}
+
+footer .footer-right ul li {
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+footer .footer-right ul li:hover {
+  background: #ff5c1c;
+  font-weight: 500;
+}
+
+footer .footer-right ul li a {
+  color: #fff;
+}
+
+footer .footer-right .footer-donate {
+  background: #ff5c1c;
+  padding: 10px 10px;
+  border-radius: 10px;
+  color: #fff;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.mini-footer {
+  width: 100%;
+}
+
+.mini-footer .brands {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  text-align: center;
+  font-size: 2rem;
+}
+
+.mini-footer .brands .fa-whatsapp {
+  color: green;
+}
+
+.mini-footer .brands .fa-facebook {
+  color: #1958ce;
+}
+
+.mini-footer .brands .fa-twitter {
+  color: #26b6da;
+}
+
+.mini-footer .mini-brandname {
+  text-align: center;
+  color: #ff5c1c;
+  font-weight: 700;
+  padding-bottom: 2rem;
 }
 /*# sourceMappingURL=main.css.map */
