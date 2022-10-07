@@ -199,6 +199,10 @@ header {
         background-size: cover;
         background-repeat: no-repeat;
 
+        /*& .text-main{
+            
+        }*/
+
         & .first-text {
             line-height: 2rem;
             font-size: fontsize(medium);
@@ -486,7 +490,7 @@ header {
 }
 
 
-    //cummunuty styling 
+    // community styling
 .community{
     max-width: 100%;
     margin-top: 20px;
@@ -499,7 +503,7 @@ header {
        position: relative;
 
        & img{
-        max-width: 100%;
+        width: 100%;
         filter: brightness(80%);
         transition: 0.5s ease;
         
@@ -655,6 +659,11 @@ header {
 
 }
 
+
+
+
+
+// Contact page styling
 .contact-head {
     width: 100%;
     min-height: 100vh;
@@ -674,21 +683,23 @@ header {
     }
 
     & .contact-form{    
-        margin: 4rem; 
+        margin: 3rem; 
         
         & .contact-item{
             margin: 1rem;
             font-weight: 700;
+            
         }
 
         & .text-input{
             width: 350px;
             height: 27px;
         }
+       
 
         & input::placeholder{
             color: $accent-color;
-            opacity: 60%;
+            
             text-align: center;
         }
 
@@ -787,6 +798,7 @@ footer{
         width: 16%;
 
         @include Mobile(){
+
             width: 30%;
             font-size: small;
         }
@@ -795,21 +807,26 @@ footer{
             margin-bottom: 2rem;
             text-align: center;
             text-decoration: underline;
+            font-size: 1.3rem;
         }
 
         & ul li{
             margin-bottom: 10px;
             padding: 4px 4px;
             text-align: center;
+            transition: .5s ease;
 
             &:hover{
-                background: $accent-color;
+                margin-left: 20px;
                 font-weight: weight(medium);
                 
             }
 
             & a{
                 color: $text-color-light;
+                &:hover{
+                    color: $accent-color;
+                }
             }
         }
     }
@@ -825,20 +842,25 @@ footer{
             margin-bottom: 2rem;
             text-align: center;
             text-decoration: underline;
+            font-size: 1.3rem;
         }
 
         & ul li{
             margin-bottom: 10px;
             padding: 4px 4px;
             text-align: center;
-
+            transition: .5s ease;
+            
             &:hover{
-                background: $accent-color;
+                margin-left: 20px;
                 font-weight: weight(medium);
             }
 
             & a{
                 color: $text-color-light;
+                &:hover{
+                    color: $accent-color;
+                }
             }
         }
         
@@ -857,10 +879,12 @@ footer{
             font-size: small;
         }
         
-        & h3{margin-top: 3.5rem;
+        & h3{
+            margin-top: 3.5rem;
             margin-bottom: 2rem;
             text-align: center;
             text-decoration: underline;
+            font-size: 1.3rem;
             
         }
 
@@ -869,14 +893,17 @@ footer{
             li{
                 margin-bottom: 30px;
                 text-align: center;
+                transition: .5s ease;
 
                 &:hover{
-                    background: $accent-color;
-                    font-weight: weight(medium);
+                    margin-left: 20px;
                 }
 
                 & a{
                     color: $text-color-light;
+                    &:hover{
+                        color: $accent-color;
+                    }
                 }
             }
         }
@@ -906,6 +933,7 @@ footer{
         & .fa-whatsapp{
             color: green;
             
+            
         }
 
         & .fa-facebook{
@@ -920,8 +948,25 @@ footer{
 
     .mini-brandname{
         text-align: center;
-        color: $accent-color;
+        color:$accent-color;
         font-weight: weight(bold);
         padding-bottom: 2rem;
     }
 }
+
+
+// FAQ page styling
+#FAQ{
+    width: 80%;
+    margin: auto;
+    padding-top: 3rem;
+   
+    & h3{
+        background-color: $primary-color;
+        
+        &:focus{
+            border-color: $accent-color;
+        }
+    }
+}
+

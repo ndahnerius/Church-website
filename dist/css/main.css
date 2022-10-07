@@ -195,6 +195,9 @@ header .Ourchurch-link:hover .our-church-sub {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
+  /*& .text-main{
+            
+        }*/
 }
 
 .top-section .top-section-text .first-text {
@@ -494,7 +497,7 @@ header .Ourchurch-link:hover .our-church-sub {
 }
 
 .community .community-image img {
-  max-width: 100%;
+  width: 100%;
   -webkit-filter: brightness(80%);
           filter: brightness(80%);
   -webkit-transition: 0.5s ease;
@@ -692,7 +695,7 @@ header .Ourchurch-link:hover .our-church-sub {
 }
 
 .contact-head .contact-form {
-  margin: 4rem;
+  margin: 3rem;
 }
 
 .contact-head .contact-form .contact-item {
@@ -707,25 +710,21 @@ header .Ourchurch-link:hover .our-church-sub {
 
 .contact-head .contact-form input::-webkit-input-placeholder {
   color: #ff5c1c;
-  opacity: 60%;
   text-align: center;
 }
 
 .contact-head .contact-form input:-ms-input-placeholder {
   color: #ff5c1c;
-  opacity: 60%;
   text-align: center;
 }
 
 .contact-head .contact-form input::-ms-input-placeholder {
   color: #ff5c1c;
-  opacity: 60%;
   text-align: center;
 }
 
 .contact-head .contact-form input::placeholder {
   color: #ff5c1c;
-  opacity: 60%;
   text-align: center;
 }
 
@@ -859,21 +858,28 @@ footer .footer-left h3 {
   margin-bottom: 2rem;
   text-align: center;
   text-decoration: underline;
+  font-size: 1.3rem;
 }
 
 footer .footer-left ul li {
   margin-bottom: 10px;
   padding: 4px 4px;
   text-align: center;
+  -webkit-transition: .5s ease;
+  transition: .5s ease;
 }
 
 footer .footer-left ul li:hover {
-  background: #ff5c1c;
+  margin-left: 20px;
   font-weight: 500;
 }
 
 footer .footer-left ul li a {
   color: #fff;
+}
+
+footer .footer-left ul li a:hover {
+  color: #ff5c1c;
 }
 
 footer .footer-middle {
@@ -891,21 +897,28 @@ footer .footer-middle h3 {
   margin-bottom: 2rem;
   text-align: center;
   text-decoration: underline;
+  font-size: 1.3rem;
 }
 
 footer .footer-middle ul li {
   margin-bottom: 10px;
   padding: 4px 4px;
   text-align: center;
+  -webkit-transition: .5s ease;
+  transition: .5s ease;
 }
 
 footer .footer-middle ul li:hover {
-  background: #ff5c1c;
+  margin-left: 20px;
   font-weight: 500;
 }
 
 footer .footer-middle ul li a {
   color: #fff;
+}
+
+footer .footer-middle ul li a:hover {
+  color: #ff5c1c;
 }
 
 footer .footer-right {
@@ -927,20 +940,26 @@ footer .footer-right h3 {
   margin-bottom: 2rem;
   text-align: center;
   text-decoration: underline;
+  font-size: 1.3rem;
 }
 
 footer .footer-right ul li {
   margin-bottom: 30px;
   text-align: center;
+  -webkit-transition: .5s ease;
+  transition: .5s ease;
 }
 
 footer .footer-right ul li:hover {
-  background: #ff5c1c;
-  font-weight: 500;
+  margin-left: 20px;
 }
 
 footer .footer-right ul li a {
   color: #fff;
+}
+
+footer .footer-right ul li a:hover {
+  color: #ff5c1c;
 }
 
 footer .footer-right .footer-donate {
@@ -980,5 +999,19 @@ footer .footer-right .footer-donate {
   color: #ff5c1c;
   font-weight: 700;
   padding-bottom: 2rem;
+}
+
+#FAQ {
+  width: 80%;
+  margin: auto;
+  padding-top: 3rem;
+}
+
+#FAQ h3 {
+  background-color: #eec9a3;
+}
+
+#FAQ h3:focus {
+  border-color: #ff5c1c;
 }
 /*# sourceMappingURL=main.css.map */
